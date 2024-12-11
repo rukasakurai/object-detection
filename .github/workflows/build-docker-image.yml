@@ -1,0 +1,4 @@
+# .github/workflows/build-docker-image.yml
+# Purpose: Builds a Docker image containing the updated .pth model and pushes it to Azure Container Registry (ACR).
+
+name: Build Docker Image

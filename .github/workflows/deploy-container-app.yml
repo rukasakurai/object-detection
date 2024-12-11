@@ -1,0 +1,4 @@
+# .github/workflows/deploy-container-app.yml
+# Purpose: Deploys the new Docker image from Azure Container Registry to Azure
+
+name: Deploy container to Azure
