@@ -97,3 +97,32 @@ Use the provided Bicep templates to provision Azure resources for training and d
 
 ### **Dependencies**
 Ensure you have the required Python libraries installed as specified in `requirements.txt`.
+
+---
+
+## **Sequence Diagram**
+
+Below is a sequence diagram representing the process of training, deploying, and using the object detection model:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant AzureML
+    participant Docker
+    participant AzureContainerApps
+
+    User->>AzureML: Prepare Training Data
+    User->>AzureML: Train Model
+    AzureML->>AzureML: Save Model
+    AzureML->>Docker: Create Docker Image
+    Docker->>AzureContainerApps: Push Docker Image
+    User->>AzureContainerApps: Deploy Model
+    User->>AzureContainerApps: Perform Inference
+```
+
+The diagram includes the following steps:
+1. Data Preparation
+2. Model Training
+3. Model Saving
+4. Docker Image Creation
+5. Deployment
